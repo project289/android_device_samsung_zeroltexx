@@ -34,3 +34,16 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3879731200
 
 # Radio
 BOARD_MODEM_TYPE := ss333
+
+# ================================================
+# PERFORMANCE & RAM TUNING
+# ================================================
+BOARD_KERNEL_CMDLINE += consoleblank=0
+TARGET_USE_INTERACTIVE_GOVERNOR := true
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_HWC2 := true
+TARGET_USE_COMPRESSED_APK := true
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+BOARD_ZRAM_SIZE := 1073741824
+BOARD_USE_LZ4_ZRAM := true
+TARGET_RECOVERY_DEVICE_MODULES += init.performance.rc

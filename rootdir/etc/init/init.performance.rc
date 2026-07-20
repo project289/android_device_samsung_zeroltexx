@@ -1,0 +1,20 @@
+on boot
+    # CPU Governor
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor "interactive"
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 400000
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1500000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 400000
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2100000
+
+    # LMK
+    write /sys/module/lowmemorykiller/parameters/minfree "48,60,72,84,96,108"
+
+    # ZRAM
+    write /sys/block/zram0/disksize 1073741824
+    write /sys/block/zram0/comp_algorithm lz4
+    swapon /dev/block/zram0
+
+    # Entropy
+    write /proc/sys/kernel/random/read_wakeup_threshold 64
+    write /proc/sys/kernel/random/write_wakeup_threshold 128

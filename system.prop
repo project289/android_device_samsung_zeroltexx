@@ -10,3 +10,48 @@ ro.use_data_netmgrd=false
 persist.data.netmgrd.qos.enable=false
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
+
+# ================================================
+# FAKE KNOX – Disable Knox checks
+# ================================================
+ro.knox.version=0
+ro.config.knox=0
+ro.knox.kss.enabled=false
+ro.knox.kss.sdp=false
+ro.knox.kss.hide=false
+ro.knox.kss.trusted=false
+ro.knox.secure_keystore=false
+ro.securestorage.support=false
+ro.securestorage.knox=false
+security.knox_persistent=0
+security.knox_kap_kdc=0
+security.knox_persistent_log=0
+
+# ================================================
+# PERFORMANCE & RAM TUNING
+# ================================================
+debug.sf.hw=1
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=1
+viewroot.setLayerType=hardware
+
+ro.sys.fw.bg_apps_limit=16
+ro.sys.fw.mOomMinFree1=48
+ro.sys.fw.mOomMinFree2=60
+ro.sys.fw.mOomMinFree3=72
+ro.sys.fw.mOomMinFree4=84
+ro.sys.fw.mOomMinFree5=96
+ro.sys.fw.mOomMinFree6=108
+
+persist.sys.zram_enabled=1
+persist.sys.zram_size=1073741824
+persist.sys.zram_algorithm=lz4
+
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+
+# Fake fingerprint for Samsung Health
+ro.product.name=zeroltexx
+ro.product.device=zeroltexx
+ro.build.fingerprint=samsung/zeroltexx/zeroltexx:10/QP1A.190711.020/G925FXXS8ETC5:user/release-keys
