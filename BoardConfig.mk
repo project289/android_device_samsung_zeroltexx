@@ -47,3 +47,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 BOARD_ZRAM_SIZE := 1073741824
 BOARD_USE_LZ4_ZRAM := true
 TARGET_RECOVERY_DEVICE_MODULES += init.performance.rc
+
+# LineageOS Soong config (needed for PATH_OVERRIDE_SOONG)
+include vendor/lineage/config/BoardConfigSoong.mk
